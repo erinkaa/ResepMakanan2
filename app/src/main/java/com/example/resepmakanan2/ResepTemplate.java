@@ -26,12 +26,12 @@ public class ResepTemplate extends AppCompatActivity {
 
         bundle = getIntent().getExtras();
 
-        imageView = findViewById(R.id.); imageView.setImageResource(bundle.getInt("gambarResep"));
-        judulResepTextView = findViewById(R.id.); judulResepTextView.setText(bundle.getString("judulResep"));
-        bahanResepTextView = findViewById(R.id.); bahanResepTextView.setText(bundle.getString("bahanResep"));
-        tahapanResepTextView = findViewById(R.id.); tahapanResepTextView.setText(bundle.getString("tahapanResep"));
+        imageView = findViewById(R.id.gambarMakanan); imageView.setImageResource(bundle.getInt("gambarResep"));
+        judulResepTextView = findViewById(R.id.judulResep); judulResepTextView.setText(bundle.getString("judulResep"));
+        bahanResepTextView = findViewById(R.id.bahanResep); bahanResepTextView.setText(bundle.getString("bahanResep"));
+        tahapanResepTextView = findViewById(R.id.tahapResep); tahapanResepTextView.setText(bundle.getString("tahapanResep"));
 
-        youTubePlayerView = findViewById(R.id.);
+        youTubePlayerView = findViewById(R.id.idResepVideo);
         getLifecycle().addObserver(youTubePlayerView);
         youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
             @Override

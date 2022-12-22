@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".resep"
+    tools:context=".ResepTemplate"
     android:background="@drawable/background">
     <androidx.appcompat.widget.Toolbar
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:id="@+id/resep">
@@ -33,56 +34,76 @@
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
+    <ScrollView
+        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="30dp"
-        >
-    <androidx.cardview.widget.CardView
-        android:layout_width="350dp"
-        android:layout_height="900dp"
-        app:cardCornerRadius="5dp"
-        >
-        <LinearLayout
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp">
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="gambarMakanan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/sayurasem"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"/>
-            <TextView
-                android:id="@+id/judulResep"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp">
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"
-                android:textSize="30sp"
-                android:textColor="@color/black"
-                android:textAlignment="center"/>
-            <TextView
-                android:id="@+id/bahanResep"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                />
-            <TextView
-                android:id="@+id/tahapResep"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                />
-        </LinearLayout>
+                android:orientation="vertical"
+                android:padding="20dp" >
 
-    </androidx.cardview.widget.CardView>
-    </LinearLayout>
+                <ImageView
+                    android:id="@+id/gambarMakanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sayurasem"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:adjustViewBounds="true"/>
+                <TextView
+                    android:id="@+id/judulResep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:text="judul"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textSize="20sp"
+                    android:text="Bahan :"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/bahanResep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/black" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textSize="20sp"
+                    android:text="Cara Pembuatan :"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/tahapResep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    />
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:id="@+id/idResepVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+</RelativeLayout>
