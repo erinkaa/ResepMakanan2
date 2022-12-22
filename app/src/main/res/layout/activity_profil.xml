@@ -7,12 +7,27 @@
     tools:context=".profil"
     android:background="@drawable/background2"
     android:padding="30dp">
-    <ImageView
-        android:id="@+id/profile"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/profile"
-        />
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp">
+            <ImageView
+                android:id="@+id/butttonBackProfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vektor2" />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profile"
+            />
+    </LinearLayout>
     <androidx.cardview.widget.CardView
         android:layout_marginTop="50dp"
         android:layout_width="360dp"

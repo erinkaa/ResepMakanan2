@@ -20,6 +20,7 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp">
                 <ImageView
+                    android:id="@+id/butttonBackResep"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/vektor2" />
@@ -98,6 +99,7 @@
                     android:textColor="@color/black"
                     />
                 <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:layout_marginTop="20dp"
                     android:id="@+id/idResepVideo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
